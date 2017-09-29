@@ -1,0 +1,16 @@
+body{
+    color: #444444;
+}
+#Body{
+    min-height: 550px;
+}
+.primary{
+    background: #f2b632 !important;
+}
+.secondery{
+    background: #2A2C43 !important;
+    color:#ffffff !important;
+}
+.left{
+    float:left !important;
+}
