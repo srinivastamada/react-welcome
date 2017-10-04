@@ -1,18 +1,68 @@
 import React, {Component} from 'react';
-
+import {Redirect} from 'react-router-dom';
+import {PostData} from '../../services/PostData';
 import './Login.css';
 
 class Login extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+     username: '',
+     password: '',
+     redirectToReferrer: false
+    };
+
+    this.login = this.login.bind(this);
+    this.onChange = this.onChange.bind(this);
+
+  }
+  componentDidMount() {
+    let localData = localStorage.getItem('userData');
+    
+  }
+  
+
+  login() {
+     PostData('login',this.state).then((result) => {
+       let responseJson = result;
+       if(responseJson.userData){         
+         localStorage.setItem('userData',JSON.stringify(responseJson));
+         this.setState({redirectToReferrer: true});
+       }
+       
+      });
+   }
+
+  onChange(e){
+    this.setState({[e.target.name]:e.target.value});
+   }
+
+   redirect(){
+
+   
+   }
+  
+
   render() {
-    return (
+
+     if (this.state.redirectToReferrer) {
+      return (<Redirect to={'/home'}/>)
+    }
+   
+    if(localStorage.getItem('userData')){
+      return (<Redirect to={'/home'}/>)
+    }
+
+     return (
       <div className="row" id="Body">
         <div className="medium-5 columns left">
         <h4>Login</h4>
         <label>Username</label>
-        <input type="text" name="username" placeholder="Username"/>
+        <input type="text" name="username" placeholder="Username" onChange={this.onChange}/>
         <label>Password</label>
-        <input type="password" name="password"  placeholder="Username"/>
-        <input type="submit" className="button success" value="Login"/>
+        <input type="password" name="password"  placeholder="Password" onChange={this.onChange}/>
+        <input type="submit" className="button success" value="Login" onClick={this.login}/>
         <a href="/signup">Registration</a>
         </div>
       </div>

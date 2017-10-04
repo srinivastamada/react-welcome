@@ -14,3 +14,6 @@ body{
 .left{
     float:left !important;
 }
+input{
+    color:#333333 !important;
+}
