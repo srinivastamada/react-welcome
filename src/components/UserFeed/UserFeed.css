@@ -1,0 +1,16 @@
+time{
+    color:#666666 !important;
+    font-size: 13px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif
+}
+input[type="text"]{
+    height: 50px;
+}
+b{
+    display: block
+}
+.people-you-might-know{
+    padding:0 !important;
+    margin-bottom:10px;
+    border-radius: 5px;
+}
