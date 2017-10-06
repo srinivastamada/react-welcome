@@ -5,6 +5,7 @@
   "dependencies": {
     "raf": "^3.3.2",
     "react": "^16.0.0",
+    "react-confirm-alert": "^1.0.7",
     "react-dom": "^16.0.0",
     "react-foundation": "^0.9.2",
     "react-linkify": "^0.2.1",

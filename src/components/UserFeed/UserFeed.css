@@ -6,3 +6,11 @@ time{
 input[type="text"]{
     height: 50px;
 }
+b{
+    display: block
+}
+.people-you-might-know{
+    padding:0 !important;
+    margin-bottom:10px;
+    border-radius: 5px;
+}

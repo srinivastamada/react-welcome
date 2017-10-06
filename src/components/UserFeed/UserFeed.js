@@ -10,10 +10,6 @@ class UserFeed extends Component {
     
   }
 
-  
-
-
-
   render() {
     
   
@@ -31,6 +27,7 @@ class UserFeed extends Component {
               
               <div className="about-people-author">
                 <p className="author-name">
+                <b>{this.props.name}</b>
                 <Linkify>{feedData.feed}</Linkify>
                 <br/>
                 
@@ -58,7 +55,7 @@ class UserFeed extends Component {
       }, this);
 
     return (
-      <div className="row">
+      <div>
         {userFeed}
 
       </div>

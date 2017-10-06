@@ -16,8 +16,15 @@ body{
 }
 input{
     color:#333333 !important;
+    border-radius:5px !important;
+}
+button{
+  border-radius:5px !important;
 }
 .off-canvas{z-index: 1 !important}
+h1,h2,h3, h4{
+  font-weight: bold !important;
+}
 
 
 .people-you-might-know {
