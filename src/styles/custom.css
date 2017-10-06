@@ -17,3 +17,109 @@ body{
 input{
     color:#333333 !important;
 }
+.off-canvas{z-index: 1 !important}
+
+
+.people-you-might-know {
+    background-color: #fefefe;
+    padding: 1rem 0 0;
+    border: 1px solid #cacaca;
+    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+  }
+  
+  .people-you-might-know .add-people-header {
+    padding: 0 0.9375rem;
+    border-bottom: 0.0625rem solid #cacaca;
+  }
+  
+  .people-you-might-know .add-people-header .header-title {
+    font-weight: bold;
+  }
+  
+  .people-you-might-know .add-people-section {
+    margin: 1rem 0 0;
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid #cacaca;
+  }
+  
+  .people-you-might-know .add-people-section .about-people {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .people-you-might-know .add-people-section .about-people .about-people-avatar {
+    padding-right: 0.5rem;
+    padding-left: 0;
+  }
+  
+  .people-you-might-know .add-people-section .about-people .about-people-avatar .avatar-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #cacaca;
+  }
+  
+  .people-you-might-know .add-people-section .about-people .about-people-author {
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+  }
+  
+  .people-you-might-know .add-people-section .about-people .about-people-author .author-name {
+    color: #0a0a0a;
+    margin: 0.375rem 0 0;
+  }
+  
+  .people-you-might-know .add-people-section .about-people .about-people-author .author-location,
+  .people-you-might-know .add-people-section .about-people .about-people-author .author-mutual {
+    color: #8a8a8a;
+    margin-bottom: 0;
+    font-size: 0.85em;
+  }
+  
+  .people-you-might-know .add-people-section .add-friend {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .people-you-might-know .add-people-section .add-friend {
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+    }
+  }
+  
+  .people-you-might-know .add-people-section .add-friend .add-friend-action {
+    margin-top: 0.7rem;
+  }
+  
+  .people-you-might-know .view-more-people {
+    margin: .7rem 0;
+  }
+  
+  .people-you-might-know .view-more-people .view-more-text {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .people-you-might-know .view-more-people .view-more-text .view-more-link {
+    color: #1779ba;
+  }
+  
+  .people-you-might-know .view-more-people .view-more-text .view-more-link:hover, .people-you-might-know .view-more-people .view-more-text .view-more-link:focus {
+    text-decoration: underline;
+  }
+  
+  

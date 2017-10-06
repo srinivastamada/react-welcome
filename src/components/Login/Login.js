@@ -7,6 +7,7 @@ class Login extends Component {
 
   constructor(){
     super();
+   
     this.state = {
      username: '',
      password: '',
@@ -18,7 +19,7 @@ class Login extends Component {
 
   }
   componentDidMount() {
-    let localData = localStorage.getItem('userData');
+    let localData = sessionStorage.getItem('userData');
     
   }
   
@@ -27,7 +28,7 @@ class Login extends Component {
      PostData('login',this.state).then((result) => {
        let responseJson = result;
        if(responseJson.userData){         
-         localStorage.setItem('userData',JSON.stringify(responseJson));
+         sessionStorage.setItem('userData',JSON.stringify(responseJson));
          this.setState({redirectToReferrer: true});
        }
        
@@ -50,7 +51,7 @@ class Login extends Component {
       return (<Redirect to={'/home'}/>)
     }
    
-    if(localStorage.getItem('userData')){
+    if(sessionStorage.getItem('userData')){
       return (<Redirect to={'/home'}/>)
     }
 
