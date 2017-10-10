@@ -52,9 +52,9 @@ class Signup extends Component {
         <div className="medium-5 columns left">
         <h4>Signup</h4>
         <label>Email</label>
-        <input type="text" name="name"  placeholder="Email" onChange={this.onChange}/>
+        <input type="text" name="email"  placeholder="Email" onChange={this.onChange}/>
         <label>Name</label>
-        <input type="text" name="email"  placeholder="Name" onChange={this.onChange}/>
+        <input type="text" name="name"  placeholder="Name" onChange={this.onChange}/>
         <label>Username</label>
         <input type="text" name="username" placeholder="Username" onChange={this.onChange}/>
         <label>Password</label>
