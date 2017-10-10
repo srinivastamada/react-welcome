@@ -18,14 +18,12 @@ class Login extends Component {
     this.onChange = this.onChange.bind(this);
 
   }
-  componentDidMount() {
-    let localData = sessionStorage.getItem('userData');
-    
-  }
+
   
 
   login() {
-     PostData('login',this.state).then((result) => {
+    if(this.state.username && this.state.password){
+      PostData('login',this.state).then((result) => {
        let responseJson = result;
        if(responseJson.userData){         
          sessionStorage.setItem('userData',JSON.stringify(responseJson));
@@ -33,16 +31,15 @@ class Login extends Component {
        }
        
       });
+    }
+    
    }
 
   onChange(e){
     this.setState({[e.target.name]:e.target.value});
    }
 
-   redirect(){
-
-   
-   }
+  
   
 
   render() {
