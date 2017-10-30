@@ -18,5 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "jest-localstorage-mock": "^2.0.1"
   }
 }

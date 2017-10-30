@@ -7,19 +7,14 @@ class Login extends Component {
 
   constructor(){
     super();
-   
     this.state = {
      username: '',
      password: '',
      redirectToReferrer: false
     };
-
     this.login = this.login.bind(this);
     this.onChange = this.onChange.bind(this);
-
   }
-
-  
 
   login() {
     if(this.state.username && this.state.password){
@@ -32,23 +27,16 @@ class Login extends Component {
        
       });
     }
-    
    }
 
   onChange(e){
     this.setState({[e.target.name]:e.target.value});
    }
 
-  
-  
 
   render() {
 
-     if (this.state.redirectToReferrer) {
-      return (<Redirect to={'/home'}/>)
-    }
-   
-    if(sessionStorage.getItem('userData')){
+     if (this.state.redirectToReferrer || sessionStorage.getItem('userData')){
       return (<Redirect to={'/home'}/>)
     }
 
