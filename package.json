@@ -17,9 +17,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev" : "nf start -p 3000"
   },
+  "main": "src/electron-starter.js",
   "devDependencies": {
+    "electron": "^1.7.9",
+    "foreman": "^2.0.0",
     "jest-localstorage-mock": "^2.0.1"
   }
 }
